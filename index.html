@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Kaufman Records Check</h1>
+    <h3></h3>
+
+    <div id="forms">
+        <form id="sum-Records">
+            <label for="total-records">Total Records</label>
+            <br>
+            <input name="total-records" class="total-records" type="number">
+        </form>
+
+        <br>
+
+        <form id="add-record">
+            <label for="needed">Add Record Needed</label>
+            <br>
+            <input name="needed" type="number" id="needed-record">
+        </form>      
+    </div>
+
+
+    <div>
+        <table class="table" id="table">
+                <tr>
+                    <th scope="col">Records:</th>
+                    <td id="kaufman-records"></td>
+                </tr>
+                <tr id="print-row">
+                    <th scope="col">Pages:</th>
+                    <td id="kaufman-pages"></td>
+                </tr>
+        </table>
+        <button id="print-btn" type="button">Print</button>
+        <button id="reset-btn">Clear</button>
+    </div>
+
+    <div id="bindery-message"></div>
+
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
