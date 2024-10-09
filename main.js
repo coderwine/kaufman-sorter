@@ -42,8 +42,8 @@ const displayRecords = () => {
             value.textContent = `${reprintRecords[i]}`;
             pages.textContent = `${pageNumbers[i]}`;
         } else {
-            value.textContent += `, ${reprintRecords[i]}`;
-            pages.textContent += `, ${pageNumbers[i]}`;
+            value.textContent += `,${reprintRecords[i]}`;
+            pages.textContent += `,${pageNumbers[i]}`;
         }
     }
 
