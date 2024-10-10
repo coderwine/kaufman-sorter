@@ -8,6 +8,8 @@ const tablePages = document.getElementById('kaufman-pages');
 const printBtn = document.getElementById('print-btn');
 const clearBtn = document.getElementById('reset-btn');
 const bindMsg = document.getElementById('bindery-message');
+const doneBtn = document.getElementById('done-btn');
+const pagesCopy = document.getElementById('pagesCopy');
 
 let totalRecords;
 let splitRecord;
@@ -46,10 +48,30 @@ const displayRecords = () => {
             pages.textContent += `,${pageNumbers[i]}`;
         }
     }
-
 }
 
 //! Event Listeners
+pagesCopy.addEventListener('click', () => {
+    console.log(tablePages.textContent);
+    const copyInfo = tablePages.textContent;
+    navigator.clipboard.writeText(copyInfo);
+    alert('Text Copied')
+})
+
+// Need to update Print display
+doneBtn.addEventListener('click', () => {
+    const records = document.getElementById('records-print')
+    
+    for(let i = 0; i < reprintRecords.length; i++ ) {
+        if(i === 0) {
+            records.textContent = `Pages: ${pageNumbers[i]}`
+        } else {
+            records.textContent += `, ${pageNumbers[i]}`;
+        }
+    }
+
+})
+
 totalRecInput.addEventListener('submit', e => {
     e.preventDefault();
     recInput = totalRecInput.childNodes[5].value
@@ -108,7 +130,7 @@ printBtn.addEventListener('click', () => {
     bindMsg.innerHTML = `
         <p>Be sure to double-check all records listed. This details all that would be printed together.</p>
         <img src="./assets/${image}.jpg" alt="dumb-image">
-        `
+        `    
     window.print();
 })
 

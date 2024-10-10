@@ -15,9 +15,12 @@ form {
 }
 
 #table {
-    max-width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vw;
     padding: .5rem;
     table-layout: fixed;
+    overflow-y: scroll;
 }
 
 th {
@@ -29,6 +32,17 @@ th,td {
     text-align: left;
     word-wrap: break-word;
 }
+
+#records-print {
+    width: 70vw;
+    margin-top: 2rem;
+}
+
+#pagesCopy:hover {
+    cursor: pointer;
+}
+
+/* ********************* */
 
 @media print {
     #forms, #print-btn, #reset-btn, h3, #print-row {
