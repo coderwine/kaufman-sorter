@@ -130,6 +130,8 @@ printBtn.addEventListener('click', () => {
     bindMsg.innerHTML = `
         <p>Be sure to double-check all records listed. This details all that would be printed together.</p>
         <img src="./assets/${image}.jpg" alt="dumb-image">
+        <br/>
+        <main id="check-records"><b>Records</b>: ${reprintRecords.join(", ")}</main>
         `    
     window.print();
 })

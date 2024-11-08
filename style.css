@@ -42,10 +42,19 @@ th,td {
     cursor: pointer;
 }
 
+#check-records {
+    font-size: x-large;
+}
+
+#bindery-message {
+    width: 75vw;
+}
+
 /* ********************* */
 
 @media print {
-    #forms, #print-btn, #reset-btn, h3, #print-row {
+    /* #forms, #print-btn, #reset-btn, h3, #print-row, #fiery-notes { */
+    #forms, #print-btn, #reset-btn, h3, #table, #fiery-notes {
         display: none;
     }
     
